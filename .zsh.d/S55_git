@@ -1,0 +1,43 @@
+#!/bin/zsh
+
+export GIT_AUTHOR_NAME="${FULLNAME}"
+export GIT_AUTHOR_EMAIL="${EMAIL}"
+export GIT_COMMITTER_NAME="${FULLNAME}"
+export GIT_COMMITTER_EMAIL="${EMAIL}"
+
+
+# ----------------------------------------------------------------------
+# The following implements a caching mechanism for git information.
+# The RPROMPT executes get_git_bprompt_info() and include the output...
+#
+#   setopt prompt_subst
+#   RPROMPT="$(get_git_prompt_info)"
+#
+# ATM we only capture the git 
+export __CURRENT_GIT_BRANCH=
+
+# get the name of the branch we are on
+parse_git_branch() {
+        git-branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) -- /'
+}
+
+# on each chdir update the cached git variable(s)
+preexec_functions+='zsh_preexec_update_git_vars'
+#precmd_functions+='zsh_precmd_update_git_vars'
+chpwd_functions+='zsh_chpwd_update_git_vars'
+zsh_preexec_update_git_vars() {
+        case "$(history $HISTCMD)" in 
+                *git*)
+                export __CURRENT_GIT_BRANCH="$(parse_git_branch)"
+                ;;
+        esac
+}
+zsh_chpwd_update_git_vars() {
+        export __CURRENT_GIT_BRANCH="$(parse_git_branch)"
+}
+
+# this function returns the current git branch
+get_git_prompt_info() {
+        echo $__CURRENT_GIT_BRANCH
+}
+
