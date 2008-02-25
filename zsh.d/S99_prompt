@@ -1,0 +1,32 @@
+#COLOR
+
+local GRAY=$'%{\e[1;30m%}'
+local LIGHT_GRAY=$'%{\e[0;37m%}'
+local WHITE=$'%{\e[1;37m%}'
+local LIGHT_BLUE=$'%{\e[1;36m%}'
+local YELLOW=$'%{\e[1;33m%}'
+local PURPLE=$'%{\e[1;35m%}'
+local GREEN=$'%{\e[1;32m%}'
+local BLUE=$'%{\e[1;34m%}'
+
+PROMPT=$GREEN'${USER}'$LIGHT_GRAY'@'$GREEN'${HOST}'$BLUE'%(!.#.$) '$WHITE
+RPROMPT=$BLUE'[%~]'$WHITE
+
+
+# alias ls='ls -F --color=auto'
+# alias ll='ls -la --color=auto'
+# alias la='ls -a --color=auto'
+# alias eng='LANG=C LANGUAGE=C LC_ALL=C'
+# alias -g lG='| grep '
+# alias gd='dirs -v; echo -n "select number: "; read newdir; cd -"$newdir"'
+
+# alias cp='cp -i'
+# alias mv='mv -i'
+# alias rm='rm -i'
+
+# setopt PROMPT_SUBST
+# setopt share_history
+# setopt autopushd
+
+# autoload -U compinit
+# compinit
