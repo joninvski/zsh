@@ -16,7 +16,6 @@ alias btnc="btdownloadcurses --max_upload_rate 2 --responsefil"
 alias btm="btlaunchmanycurses"
 
 alias ls="ls --color=auto"
-alias ls="ls --color=auto"
 alias la="ls --color=always -a"
 alias ll="ls --color=always -l"
 alias lla="ls --color=always -la"
@@ -36,7 +35,7 @@ ovi () {
     vim -O ${${1%.ml}%.}.ml{i,}
 }
 
-wt() { 
+wt() {
         while true ; do ( $@ ) ; sleep 1 ; clear ; done
 }
 
@@ -64,6 +63,3 @@ if [ -n "$_real_ssh" ] ; then
                 fi
         }
 fi
-        
-        
-
