@@ -12,21 +12,3 @@ local BLUE=$'%{\e[1;34m%}'
 PROMPT=$GREEN'${USER}'$LIGHT_GRAY'@'$GREEN'${HOST}'$BLUE'%(!.#.$) '$WHITE
 RPROMPT=$BLUE'[%~]'$WHITE
 
-
-# alias ls='ls -F --color=auto'
-# alias ll='ls -la --color=auto'
-# alias la='ls -a --color=auto'
-# alias eng='LANG=C LANGUAGE=C LC_ALL=C'
-# alias -g lG='| grep '
-# alias gd='dirs -v; echo -n "select number: "; read newdir; cd -"$newdir"'
-
-# alias cp='cp -i'
-# alias mv='mv -i'
-# alias rm='rm -i'
-
-# setopt PROMPT_SUBST
-# setopt share_history
-# setopt autopushd
-
-# autoload -U compinit
-# compinit
