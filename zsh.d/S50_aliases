@@ -21,6 +21,8 @@ alias ll="ls --color=always -l"
 alias lla="ls --color=always -la"
 alias lal="ls --color=always -la"
 
+alias mplayer="mplayer -cache 5000"
+
 alias rm='rm -i'
 
 cvi () {
