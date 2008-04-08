@@ -20,13 +20,14 @@ function rprompt {
 }
 
 function lprompt {
-    local color1 color2 rightBracket leftBracket
+    local color1 color2 rightBracket leftBracket white
     color1="%{%b$fg[$2]%}"
     color2="%{$4$fg[$3]%}"
+    white="%{%b$fg[white]%}"
     leftBracket=$color1${1[1]}
     rightBracket=$color1${1[2]}
 
-    PROMPT="$leftBracket$color2%n$LIGHT_GRAY@$color2%m$rightBracket"
+    PROMPT="$leftBracket$color2%n$white@$color2%m$rightBracket "
 }
 
 #If the user is root
