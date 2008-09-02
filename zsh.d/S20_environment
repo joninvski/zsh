@@ -19,9 +19,9 @@ export FULLNAME="Joao Trindade"
 #export GIT_AUTHOR_EMAIL=$EMAIL
 #export GIT_COMMITTER_EMAIL=$EMAIL
 
-export IRCNICK=bartman
+export IRCNICK=jonas_k9
 export IRCNAME=${FULLNAME}
-export IRCSERVER=irc.jukie.net
+export IRCSERVER=irc.freenode.net
 export IRC_SERVERS_FILE="$HOME/.irc-serv"
 
 export CVS_RSH="ssh"
@@ -29,7 +29,8 @@ export CVSREAD=yes
 export MANWIDTH=80
 export EDITOR=vim
 export VISUAL=vim
-#export CCACHE_DIR=$HOME/.ccache
+
+export SHELL="/bin/zsh"
 
 export INPUTRC="~/.inputrc"
 export MAIL="${HOME}/mail/inbox"

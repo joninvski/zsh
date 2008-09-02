@@ -1,5 +1,25 @@
+#######################################
+# .zshrc configuration file
+#
+# Not yet completed.
+# Still needs a global cleanup
+#
+# Author: João Trindade
+# WWW: http://joaotrindade.no-ip.org
+# Email: trindade.joao@gmail.com
+#######################################
+# Heavily inspired in config files found at:
+# http://www.jukie.net/~bart/
+#
+# Many thanks to Bart Trojanowski.
+#######################################
+# Latest version, always available at:
+# http://joaotrindade.no-ip.org/git/gitweb.cgi?p=zsh/.git;a=summary
+#######################################
+
 #! /bin/zsh
-autoload -U compinit zrecompile
+autoload -U compinit zrecompile # Activatesthe zsh auto-completion
+
 zsh_cache=${HOME}/.zsh_cache
 mkdir -p $zsh_cache
 
