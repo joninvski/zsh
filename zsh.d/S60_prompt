@@ -46,6 +46,10 @@ else
             lprompt '[]' bold green
             rprompt '()' yellow white
             ;;
+        fozzie) # In rizzo computer
+            lprompt '[]' bold green
+            rprompt '()' yellow white
+            ;;
         camilla) # In SMARTIES computer
             lprompt '[]' bold yellow
             rprompt '()' yellow white

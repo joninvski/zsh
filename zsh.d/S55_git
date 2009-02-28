@@ -47,6 +47,24 @@ zsh_chpwd_update_git_vars() {
 
 # this function returns the current git branch
 get_git_prompt_info() {
-            test -n "$__CURRENT_GIT_VARS_INVALID" && zsh_git_compute_vars
-            echo $__CURRENT_GIT_BRANCH
+    test -n "$__CURRENT_GIT_VARS_INVALID" && zsh_git_compute_vars
+    if [ "$__CURRENT_GIT_BRANCH" ]; then
+         status_icon=$(git_status)
+         echo "$status_icon%{$fg[yellow]%} $__CURRENT_GIT_BRANCH"
+    fi
+}
+
+#Show character if index and/or work-tree are dirty
+git_status() {
+    my_status=$(git status)
+
+    if [[ "$my_status" == *"Changes to be committed"* ]]; then
+        output="%{$fg[green]%}+"
+    fi
+
+    if [[ "$my_status" == *"Changed but not updated"* ]]; then
+        output="$output%{$fg[red]%}*"
+    fi
+
+    echo $output
 }

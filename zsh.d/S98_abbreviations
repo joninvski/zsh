@@ -1,6 +1,7 @@
 typeset -Ag abbreviations
 abbreviations=(
   "jt"    "joaotrindade.no-ip.org"
+  "ap"    "/home/workspace/appia/trunk/appia"
 )
 
 magic-abbrev-expand() {
