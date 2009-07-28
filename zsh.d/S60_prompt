@@ -20,6 +20,20 @@ function rprompt {
 }
 
 function lprompt {
+    setopt prompt_subst
+
+    # let's load colors into our environment, then set them
+    autoload colors
+
+    if [[ "$terminfo[colors]" -gt 8 ]]; then
+        colors
+    fi
+
+    for COLOR in RED GREEN YELLOW BLUE WHITE BLACK; do
+        eval PR_$COLOR='%{$fg_no_bold[${(L)COLOR}]%}'
+        eval PR_BOLD_$COLOR='%{$fg_bold[${(L)COLOR}]%}'
+    done
+
     local color1 color2 rightBracket leftBracket white
     color1="%{%b$fg[$2]%}"
     color2="%{$4$fg[$3]%}"
@@ -27,7 +41,17 @@ function lprompt {
     leftBracket=$color1${1[1]}
     rightBracket=$color1${1[2]}
 
-    PROMPT="$leftBracket$color2%n$white@$color2%m$rightBracket "
+    PDIR="$leftBracket$color2%n$white@$color2%m$rightBracket "
+
+    # Finally, let's set the prompt
+    #
+    # Finally, let's set the prompt
+    PROMPT="${PR_BOLD_RED}<${PR_RED}<${PR_BOLD_BLACK}<\
+${PR_BOLD_WHITE} ${PDIR} ${PR_RED}!${PR_BOLD_WHITE}%h${PR_BOLD_RED} \
+%(?.. E:%?)${PR_BOLD_BLUE}${PR_SCREEN}${PR_JOBS}${PR_GIT}${PR_BATTERY}\
+${PR_BOLD_WHITE}${VIMODE}
+${PR_BOLD_BLACK}>${PR_GREEN}>${PR_BOLD_GREEN}>\
+%{${reset_color}%} "
 }
 
 #If the user is root
