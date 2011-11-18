@@ -74,7 +74,7 @@ else
             lprompt '[]' bold green
             rprompt '()' yellow white
             ;;
-        camilla) # In SMARTIES computer
+        robin) # In SMARTIES computer
             lprompt '[]' bold yellow
             rprompt '()' yellow white
             ;;
