@@ -61,6 +61,9 @@ fi
 PATH="$PATH:/bin:/usr/bin:/usr/local/bin"
 PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin"
 PATH="$PATH:/usr/X11R6/bin"
+#Added android tools
+PATH="$PATH:/home/workspace/android/android-sdk-linux/tools/"
+PATH="$PATH:/home/workspace/android/android-sdk-linux/platform-tools/"
 export PATH
 
 # this makes man pages look nicer...
@@ -77,3 +80,6 @@ CTAGS="--c++-kinds=+p --fields=+iaS --extra=+q"
 
 #My python path
 PYTHONPATH="."
+
+#JAVA_HOME set
+JAVA_HOME=/usr/lib/jvm/default-java
