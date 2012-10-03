@@ -1,4 +1,6 @@
 all:
+	git submodule init
+	git submodule update
 	cd ~
 	ln -f -s zsh/zshrc ~/.zshrc
 	ln -f -s zsh/zsh.d ~/.zsh.d
