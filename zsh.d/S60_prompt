@@ -75,10 +75,14 @@ else
             rprompt '()' yellow white
             ;;
         robin) # In SMARTIES computer
+            lprompt '[]' bold green
+            rprompt '()' yellow white
+            ;;
+        tagus) # In INESC computer
             lprompt '[]' bold yellow
             rprompt '()' yellow white
             ;;
-        *) # In any other computer 
+        *) # In any other computer
             lprompt '[]' bold blue
             rprompt '()' yellow white
             ;;
