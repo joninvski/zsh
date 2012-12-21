@@ -183,5 +183,6 @@ REPORTTIME=2                # report time if execution exceeds amount of seconds
 SAVEHIST=10000              # maximum of history events to be save
 LOGCHECK=60
 watch=(notme)               # watch login/logout
-WORDCHARS="*?_-.[]~/&;!#$%^(){}<>"
+# WORDCHARS="*?_-.[]~/&;!#$%^(){}<>"
+WORDCHARS="*?_-.[]~&!#$%^(){}<>"
                             # part of word in line editor

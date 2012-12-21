@@ -5,7 +5,7 @@
 # Still needs a global cleanup
 #
 # Author: João Trindade
-# WWW: http://joaotrindade.no-ip.org
+# WWW: http://thisblog.runsfreesoftware.com
 # Email: trindade.joao@gmail.com
 #######################################
 # Heavily inspired in config files found at:
@@ -14,7 +14,7 @@
 # Many thanks to Bart Trojanowski.
 #######################################
 # Latest version, always available at:
-# http://joaotrindade.no-ip.org/git/gitweb.cgi?p=zsh/.git;a=summary
+# https://github.com/joninvski/zsh
 #######################################
 
 #! /bin/zsh
