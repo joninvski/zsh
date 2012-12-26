@@ -58,11 +58,11 @@ get_git_prompt_info() {
 git_status() {
     my_status=$(git status)
 
-    if [[ "$my_status" == *"Changes to be committed"* ]]; then
+    if [[ "$my_status" == *"Changes not staged for commit"* ]]; then
         output="%{$fg[green]%}+"
     fi
 
-    if [[ "$my_status" == *"Changed but not updated"* ]]; then
+    if [[ "$my_status" == *"Untracked files:"* ]]; then
         output="$output%{$fg[red]%}*"
     fi
 
