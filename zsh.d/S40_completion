@@ -23,12 +23,12 @@ zstyle ':completion:*:processes' command 'ps -au$USER -o pid,time,cmd|grep -v "p
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)[ 0-9:]#([^ ]#)*=01;30=01;31=01;38'
 
 #[ hosts and users ]############################################################
-hosts=(tagus.inesc-id.pt joaotrindade.no-ip.org)
+hosts=(tagus.inesc-id.pt pifactorial.com zerodecimal.com)
 
 zstyle ':completion:*' hosts $hosts
 zstyle ':completion:*:hosts' list-colors '=(#b)(*)(.inesc-id.pt)=01;30=01;31' '=[^.]#=01;31'
 
-users=(root jtrindade joao.trindade)
+users=(root jtrindade joao.trindade zerodeci)
 zstyle ':completion:*' users $users
 
 zstyle ':completion:*:*:[ak]dvi:*' file-patterns \
