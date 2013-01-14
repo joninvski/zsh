@@ -25,7 +25,7 @@ setopt auto_param_keys      # remove trailing spaces after completion if needed
 setopt auto_param_slash     # add slash for directories
 setopt auto_pushd           # cd = pushd
 setopt auto_remove_slash    # remove slash on dirs if word separator added
-setopt auto_resume          # simgle word resume if possible
+setopt auto_resume          # single word resume if possible
 
 #[ b ]##########################################################################
 setopt bad_pattern          # warn on bad file patterns
@@ -184,5 +184,12 @@ SAVEHIST=10000              # maximum of history events to be save
 LOGCHECK=60
 watch=(notme)               # watch login/logout
 # WORDCHARS="*?_-.[]~/&;!#$%^(){}<>"
-WORDCHARS="*?_-.[]~&!#$%^(){}<>"
-                            # part of word in line editor
+WORDCHARS="*?_-.[]~&!#$%^(){}<>" # '/' No longer is considered to be a char of a word. Great for control+w navigatio
+
+#
+## Aliases
+##
+#
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
