@@ -1,5 +1,7 @@
 #! /bin/zsh
 
+bindkey -M viins 'jk' vi-cmd-mode
+
 bindkey -v "^[[3~" delete-char
 bindkey -v "^[[5~" backward-word
 bindkey -v "^[[6~" forward-word
@@ -18,4 +20,3 @@ bindkey -v "^W" backward-kill-word
 
 bindkey -v "^N" down-history
 bindkey -v "^P" up-history
-
