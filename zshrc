@@ -1,41 +1,48 @@
-#######################################
-# .zshrc configuration file
-#
-# Not yet completed.
-# Still needs a global cleanup
-#
-# Author: João Trindade
-# WWW: http://thisblog.runsfreesoftware.com
-# Email: trindade.joao@gmail.com
-#######################################
-# Heavily inspired in config files found at:
-# http://www.jukie.net/~bart/
-#
-# Many thanks to Bart Trojanowski.
-#######################################
-# Latest version, always available at:
-# https://github.com/joninvski/zsh
-#######################################
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/zsh/oh-my-zsh
 
-#! /bin/zsh
-autoload -U compinit zrecompile # Activatesthe zsh auto-completion
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="ys"
 
-zsh_cache=${HOME}/.zsh_cache
-mkdir -p $zsh_cache
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias tmux="tmux -2" # To assume the console has 256 colors
 
-if [ $UID -eq 0 ]; then
-    compinit
-else
-    compinit -d $zsh_cache/zcomp-$HOST
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
 
-    for f in ~/.zshrc $zsh_cache/zcomp-$HOST; do
-        zrecompile -p $f && rm -f $f.zwc.old
-    done
-fi
+# Comment this out to disable bi-weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
 
-setopt extended_glob
-for zshrc_snipplet in ~/.zsh.d/S[0-9][0-9]*[^~] ; do
-    source $zshrc_snipplet
-done
+# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
 
-fpath=(~/zsh/zsh-completions/src/ $fpath)
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git vi-mode git-extras git_remote_branch mvn)
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+export PATH=$PATH:/home/jtrindade/bin:/home/jtrindade/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/X11R6/bin:/home/workspace/android/android-sdk-linux/tools/:/home/workspace/android/android-sdk-linux/platform-tools/:/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/X11R6/bin:/home/workspace/android/android-sdk-linux/tools/:/home/workspace/android/android-sdk-linux/platform-tools/
+
+export EDITOR=vim
+export VISUAL=vim
+
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

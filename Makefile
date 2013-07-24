@@ -1,9 +1,3 @@
 all:
-	git submodule init
-	git submodule update
-	cd ~
-	ln -f -s zsh/zshrc ~/.zshrc
-	ln -f -s zsh/zsh.d ~/.zsh.d
-	#Usefull for machines with a previous zsh
-	echo "RUN THE FOLLOWING COMMAND ON MACHINES WITH PREVIOUS ZSH"
-	echo "autoload -U compinit zrecompile"
+	ln -f -s `pwd`/zshrc ~/.zshrc
+	git clone "https://github.com/robbyrussell/oh-my-zsh.git"
