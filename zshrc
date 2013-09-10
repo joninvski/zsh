@@ -38,7 +38,7 @@ plugins=(git vi-mode git-extras git_remote_branch mvn)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/home/jtrindade/bin:/home/jtrindade/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/X11R6/bin:/home/workspace/android/android-sdk-linux/tools/:/home/workspace/android/android-sdk-linux/platform-tools/:/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/X11R6/bin:/home/workspace/android/android-sdk-linux/tools/:/home/workspace/android/android-sdk-linux/platform-tools/
+export PATH=$PATH:${HOME}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/X11R6/bin:/home/workspace/android/android-sdk-linux/tools/:/home/workspace/android/android-sdk-linux/platform-tools/:/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/X11R6/bin:/home/workspace/android/android-sdk-linux/tools/:/home/workspace/android/android-sdk-linux/platform-tools/
 
 export EDITOR=vim
 export VISUAL=vim
