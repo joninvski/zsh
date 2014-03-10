@@ -35,10 +35,14 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git vi-mode git-extras git_remote_branch mvn gitignore)
 
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:${HOME}/bin:/usr/local/sbin:/usr/local/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
+for i in paths-to-add/*; do
+    source ${i};
+done
+export PATH=$PATH:${HOME}/bin:/usr/local/sbin:/usr/local/bin
 
 export EDITOR=vim
 export VISUAL=vim
