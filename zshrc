@@ -33,16 +33,12 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode git-extras git_remote_branch mvn)
+plugins=(git vi-mode git-extras git_remote_branch mvn gitignore)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:${HOME}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/X11R6/bin:/home/workspace/android/android-sdk-linux/tools/:/home/workspace/android/android-sdk-linux/platform-tools/:/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/X11R6/bin:/home/workspace/android/android-sdk-linux/tools/:/home/workspace/android/android-sdk-linux/platform-tools/
+export PATH=$PATH:${HOME}/bin:/usr/local/sbin:/usr/local/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
 
 export EDITOR=vim
 export VISUAL=vim
-
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
