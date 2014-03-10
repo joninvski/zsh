@@ -39,10 +39,10 @@ plugins=(git vi-mode git-extras git_remote_branch mvn gitignore)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-for i in paths-to-add/*; do
+for i in $HOME/zsh/paths-to-add/*; do
     source ${i};
 done
-export PATH=$PATH:${HOME}/bin:/usr/local/sbin:/usr/local/bin
+export PATH=$PATH:${HOME}/bin:/usr/local/sbin:/usr/local/bin:/sbin
 
 export EDITOR=vim
 export VISUAL=vim
