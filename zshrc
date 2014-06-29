@@ -46,3 +46,6 @@ export PATH=$PATH:${HOME}/bin:/usr/local/sbin:/usr/local/bin:/sbin
 
 export EDITOR=vim
 export VISUAL=vim
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
