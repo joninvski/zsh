@@ -33,7 +33,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode git-extras git_remote_branch mvn gitignore)
+plugins=(git vi-mode git-extras git_remote_branch mvn gitignore docker adb)
 
 
 source $ZSH/oh-my-zsh.sh

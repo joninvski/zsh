@@ -1,2 +1,2 @@
-alias g="./gradlew " # To assume the console has 256 colors
+alias g="./gradlew --daemon "
 alias ack="ack-grep"
