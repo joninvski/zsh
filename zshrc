@@ -6,6 +6,7 @@ ZSH=$HOME/zsh/oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="ys"
+# ZSH_THEME="martinus"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -33,9 +34,29 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode git-extras git_remote_branch gitignore docker adb aws my_alias)
+plugins=(git vi-mode git-extras git_remote_branch gitignore docker adb aws my_alias bgnotify
+         bower bundler common-aliases extract gem gitfast gulp heroku httpie jsontools meteor mix
+         npm rails rbenv redis-cli rsync tmux tmuxinator vagrant zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+source $ZSH/plugins/history-substring-search/history-substring-search.zsh
+
+# History substring search plugin binding
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
+# bind UP and DOWN arrow keys (compatibility fallback
+# for Ubuntu 12.04, Fedora 21, and MacOSX 10.9 users)
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# bind P and N for EMACS mode
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+
+# bind k and j for VI mode
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 # Customize to your needs...
 for i in $HOME/zsh/paths-to-add/*; do
@@ -43,8 +64,28 @@ for i in $HOME/zsh/paths-to-add/*; do
 done
 export PATH=$PATH:${HOME}/bin:/usr/local/sbin:/usr/local/bin:/sbin
 
+# 256 color support
+export TERM=xterm-256color
+
 export EDITOR=vim
 export VISUAL=vim
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+BASE16_SHELL="/home/talkdesk/.config/base16-shell/base16-default.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+# Use vman as man wrapper
+compdef vman="man"
+
+# Uses SuperMan vim plugin
+man() {
+  nvim -c "SuperMan $*"
+
+  if [ "$?" != "0" ]; then
+    echo "No manual entry for $*"
+  fi
+}
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
