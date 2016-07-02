@@ -15,6 +15,3 @@ bindkey -v "^W" backward-kill-word
 bindkey -v "^[[3~" delete-char
 bindkey -v "^[[5~" backward-word
 bindkey -v "^[[6~" forward-word
-
-bindkey -v "^[[A" history-beginning-search-backward
-bindkey -v "^[[B" history-beginning-search-forward
