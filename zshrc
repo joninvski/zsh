@@ -36,7 +36,7 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git vi-mode git-extras git_remote_branch gitignore docker adb aws my_alias bgnotify
          bower bundler common-aliases extract gem gitfast gulp heroku httpie jsontools meteor mix
-         npm rails rbenv redis-cli rsync tmux tmuxinator vagrant zsh-syntax-highlighting)
+         npm rails rbenv redis-cli rsync tmux tmuxinator vagrant zsh-syntax-highlighting command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH/plugins/history-substring-search/history-substring-search.zsh
@@ -73,7 +73,7 @@ export VISUAL=vim
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-BASE16_SHELL="/home/talkdesk/.config/base16-shell/base16-default.dark.sh"
+BASE16_SHELL="${HOME}/.config/base16-shell/scripts/base16-default-dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # Use vman as man wrapper
