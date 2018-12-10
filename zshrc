@@ -65,7 +65,7 @@ done
 export PATH=$PATH:${HOME}/bin:/usr/local/sbin:/usr/local/bin:/sbin
 
 # 256 color support
-export TERM=xterm-256color
+export TERM=screen-256color
 
 export EDITOR=vim
 export VISUAL=vim
@@ -77,3 +77,9 @@ BASE16_SHELL="${HOME}/.config/base16-shell/scripts/base16-ashes.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ /usr/bin/kubectl ]; then source <(kubectl completion zsh); fi
