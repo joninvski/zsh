@@ -36,7 +36,7 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git vi-mode git-extras git_remote_branch gitignore docker adb aws my_alias bgnotify
          bower bundler common-aliases extract gem gitfast gulp heroku httpie jsontools meteor mix
-         npm rails rbenv redis-cli rsync tmux tmuxinator vagrant zsh-syntax-highlighting command-not-found autojump)
+         npm rails rbenv redis-cli rsync tmux tmuxinator vagrant zsh-syntax-highlighting autojump)
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH/plugins/history-substring-search/history-substring-search.zsh
