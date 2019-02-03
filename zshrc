@@ -65,7 +65,8 @@ done
 export PATH=$PATH:${HOME}/bin:/usr/local/sbin:/usr/local/bin:/sbin
 
 # 256 color support
-export TERM=screen-256color
+# export TERM=screen-256color
+export TERM=tmux-256color
 
 export EDITOR=vim
 export VISUAL=vim
@@ -81,5 +82,9 @@ if [ -n "$DESKTOP_SESSION" ];then
     eval $(gnome-keyring-daemon --start)
     export SSH_AUTH_SOCK
 fi
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+### Add snap bin to path
+export PATH="/snap/bin:$PATH"
 if [ /usr/bin/kubectl ]; then source <(kubectl completion zsh); fi
+
+source ${HOME}/.config/base16-shell/scripts/base16-ashes.sh
