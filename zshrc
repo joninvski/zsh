@@ -85,6 +85,9 @@ fi
 
 ### Add snap bin to path
 export PATH="/snap/bin:$PATH"
+
+[ -f ${HOME}/zsh/secrets.zsh ] && source ${HOME}/zsh/secrets.zsh
+
 if [ /usr/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
 source ${HOME}/.config/base16-shell/scripts/base16-ashes.sh
